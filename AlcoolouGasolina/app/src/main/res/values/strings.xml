@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Alcool ou Gasolina</string>
+    <string name="textoCabecalho">Saiba a melhor opção para abastecer o seu carro</string>
+    <string name="textoCampo1">Preço da gasolina. Ex: 1.90</string>
+    <string name="textoCampo2">Preço do alcool. Ex: 1.90</string>
+    <string name="textoBotao">Calcular</string>
+    <string name="textoResultado">Resultado</string>
+</resources>
