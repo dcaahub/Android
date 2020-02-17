@@ -1,5 +1,6 @@
 package com.example.appatmconsultoria;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -35,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                enviarEmail();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -54,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void enviarEmail(){
+        Intent intent = new Intent(Intent.ACTION_SEND);
+
+        intent.putExtra(Intent.EXTRA_EMAIL, R.string.navegacao_email);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Contato pelo app");
+        intent.putExtra(Intent.EXTRA_TEXT, "Mensagem automática");
+
+        intent.setType("message/rfc822");
+
+        startActivity(Intent.createChooser(intent, "Compartilhar"));
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
