@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Preferencias do Usuario</string>
+    <string name="perguntaNome">Qual o seu nome?</string>
+</resources>
