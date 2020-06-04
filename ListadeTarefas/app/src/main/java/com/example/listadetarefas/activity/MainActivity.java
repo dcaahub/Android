@@ -1,20 +1,32 @@
-package com.example.listadetarefas;
+package com.example.listadetarefas.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.listadetarefas.R;
+import com.example.listadetarefas.adapter.TarefaAdapter;
+import com.example.listadetarefas.model.Tarefa;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private TarefaAdapter tarefaAdapter;
+    private List<Tarefa> listaTarefas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Configurar recycler
+        recyclerView = findViewById(R.id.recyclerView);
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +47,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void carregarListaDeTarefas(){
+        //Listar Tarefas
+        Tarefa tarefa1 = new Tarefa();
+        tarefa1.setNomeTarefa("Ir ao mercado");
+        listaTarefas.add(tarefa1);
+        Tarefa tarefa2 = new Tarefa();
+        tarefa2.setNomeTarefa("Ir a feira");
+        listaTarefas.add(tarefa2);
+
+        /*Exibe lista de tarefas no RecyclerView*/
+
+
+        //configurar adapter
+        tarefaAdapter = new TarefaAdapter(listaTarefas);
+        //configurar RecyclerView
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayout.VERTICAL));
+        recyclerView.setAdapter(tarefaAdapter);
+    }
+
+    @Override
+    protected void onStart() {
+        carregarListaDeTarefas();
+        super.onStart();
     }
 
     @Override
