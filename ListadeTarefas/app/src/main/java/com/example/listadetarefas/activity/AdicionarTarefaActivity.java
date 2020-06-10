@@ -57,13 +57,13 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
                         if ( tarefaDAO.atualizar( tarefa ) ) {
                             finish();
                             Toast.makeText(getApplicationContext(), "Sucesso ao atualizar tarefa!",
-                                    Toast.LENGTH_SHORT);
-                            
+                                    Toast.LENGTH_SHORT).show();
+
                         }
                         else{
 
                             Toast.makeText(getApplicationContext(), "Erro ao atualizar tarefa!",
-                                    Toast.LENGTH_SHORT);
+                                    Toast.LENGTH_SHORT).show();
 
                         }
                     }
@@ -78,11 +78,11 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
                         if( tarefaDAO.salvar(tarefa) ){
                             finish();
                             Toast.makeText(getApplicationContext(), "Sucesso ao salvar tarefa!",
-                                    Toast.LENGTH_SHORT);
+                                    Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Toast.makeText(getApplicationContext(), "Erro ao salvar tarefa!",
-                                    Toast.LENGTH_SHORT);
+                                    Toast.LENGTH_SHORT).show();
 
                         }
 
