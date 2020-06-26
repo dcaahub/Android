@@ -14,11 +14,12 @@ public class MainActivity extends IntroActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
+
         setButtonBackVisible(false);
         setButtonNextVisible(false);
 
         addSlide(new FragmentSlide.Builder()
-                .background(android.R.color.holo_orange_light)
+                .background(android.R.color.white)
                 .fragment(R.layout.intro_1)
                 .build()
         );
@@ -27,31 +28,17 @@ public class MainActivity extends IntroActivity {
                 .fragment(R.layout.intro_2)
                 .build()
         );
-
-        /*
-        setButtonBackVisible(false);
-        setButtonNextVisible(false);
-
-        addSlide(new SimpleSlide.Builder()
-                .title("Título")
-                .description("Descrição")
-                .image(R.drawable.um)
-                .background(android.R.color.holo_orange_light)
+        addSlide(new FragmentSlide.Builder()
+                .background(android.R.color.white)
+                .fragment(R.layout.intro_3)
                 .build()
         );
-        addSlide(new SimpleSlide.Builder()
-                .title("Título 2")
-                .description("Descrição 2")
-                .image(R.drawable.dois)
-                .background(android.R.color.holo_orange_light)
+        addSlide(new FragmentSlide.Builder()
+                .background(android.R.color.white)
+                .fragment(R.layout.intro_4)
                 .build()
         );
-        addSlide(new SimpleSlide.Builder()
-                .title("Título 3")
-                .description("Descrição 3")
-                .image(R.drawable.tres)
-                .background(android.R.color.holo_orange_light)
-                .build()
-        );*/
+
+
     }
 }
