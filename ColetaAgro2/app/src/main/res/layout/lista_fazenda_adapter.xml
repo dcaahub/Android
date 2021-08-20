@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+        <TextView
+        android:id="@+id/textFazenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fazenda"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/textIdentificador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Identificador" />
+
+        <TextView
+        android:id="@+id/textEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endereço" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

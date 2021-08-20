@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "486497501750",
+    "firebase_url": "https://coletaagro2.firebaseio.com",
+    "project_id": "coletaagro2",
+    "storage_bucket": "coletaagro2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486497501750:android:37495c113667cf75070e97",
+        "android_client_info": {
+          "package_name": "com.example.coletaagro2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486497501750-1sc0vbn3cbcir5mh2dv8ab2sga36cqna.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.coletaagro2",
+            "certificate_hash": "2ad4e3acbacef37bd35e6193f447e96e034eb03f"
+          }
+        },
+        {
+          "client_id": "486497501750-lbd4rr8fgg1jqkouj099omtdldoq7a5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbN9Ho2ZZTqdKgLmfbIrsgJVvLm24_NbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486497501750-lbd4rr8fgg1jqkouj099omtdldoq7a5a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
